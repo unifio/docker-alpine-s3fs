@@ -21,4 +21,6 @@ RUN apk --update --no-cache add fuse alpine-sdk automake autoconf libxml2-dev fu
     rm -rf /tmp/build
 
 COPY docker-entrypoint.sh /
+COPY mime.types /etc
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
